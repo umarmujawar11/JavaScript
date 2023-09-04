@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head> 
+  <title> Clousers And CallBacks </title> 
+</head>
+<script>
+  function executeAfterTime(funcArray, delay) {
+    funcArray.forEach((func) => {
+      setTimeout(func, delay);
+    });
+  }
+  const functions = [
+    () => console.log('First Name'),
+    () => console.log('Last Name'),
+    () => console.log('Email'),
+    () => console.log('Password')
+
+  ];
+
+  executeAfterTime(functions, 1000);
+
+</script>
+
+</html>

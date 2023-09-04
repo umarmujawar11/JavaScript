@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<p id="id"> </p>
+
+<head>
+  <title>Async Await</title>
+   </head>
+<script>
+  function waitforme(millisec) {
+    return new Promise(resolve => {
+      setTimeout(() => { resolve('') }, millisec);
+    })
+  }
+
+  async function printy() {
+    for (let i = 0; i < 10; ++i) {
+      await waitforme(1000);
+
+      let x = Math.random() * 1000;
+      var ID = document.getElementById("id");
+      ID.innerHTML += '<br>' + x;
+    }
+    ID.innerHTML += '<br>' + "Loop execution finished!";
+  }
+
+  printy();
+</script>
+
+</html>
